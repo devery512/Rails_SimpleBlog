@@ -6,18 +6,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'%>
     <%= render 'layouts/navigation' %>
+    <%= render 'layouts/newnav' %>
   </head>
 
   <body>
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
+      <%# <div class="col-xs-10 col-xs-offset-1">
       <%= flash.each do |name, msg| %>
-        <div class='alert alet-<%="#{name}" %>'>
-          <a href="#" class="close" data-dimiss="alert">&215;</a>
+       <%# <div class='alert alet-<%="#{name}" %>'>
+         <%# <a href="#" class="close" data-dimiss="alert">&215;</a>
       <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-        </div>
+       <%# </div>
       <% end %>
       </div>
     </div>
